@@ -42,10 +42,15 @@ public class PrincipalActivity extends AppCompatActivity {
                     //transformar o valor do campo1 para INTEIRO
                     int num1 = Integer.parseInt(txtCampo1.getText().toString());
                     int num2 = Integer.parseInt(txtCampo2.getText().toString());
-                    //transformar um número em String
-                    lblTexto.setText(String.valueOf(num1 + num2));
 
-                    Tools.exibirMensagem(context,"Resultado");
+                    //String.valueOf(numero aqui) = transformar um número em String
+                    int resultado;
+                    int[] numeros = {num1, num2};
+                    resultado = Tools.somarInteiros(numeros);
+
+                    lblTexto.setText(String.valueOf(resultado));
+
+                    Tools.exibirMensagem(context,"Resultado = " + resultado);
                 }
             }
         });
